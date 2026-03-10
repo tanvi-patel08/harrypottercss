@@ -1,0 +1,149 @@
+body{
+    font-family: Georgia, serif;
+    background-color: #111;
+    color: white;
+    margin:0;
+}
+
+/* calc() example */
+header{
+    height: calc(100vh - 80vh);
+    background: #2b1b17;
+    text-align:center;
+    padding:20px;
+}
+
+nav a{
+    color: gold;
+    margin: 10px;
+    text-decoration:none;
+}
+
+/* hover pseudo class */
+nav a:hover{
+    color: red;
+}
+
+/* visited links */
+nav a:visited{
+    color: purple;
+}
+
+/* paragraph pseudo elements */
+.intro p::before{
+    content: "Magical Story: ";
+    color: gold;
+    font-weight:bold;
+}
+
+.intro p::first-letter{
+    font-size:35px;
+    color: gold;
+}
+
+.intro p::first-line{
+    color: lightblue;
+}
+
+/* list styling */
+ul{
+    width: calc(100% - 50px);
+    margin:auto;
+}
+
+/* odd items */
+li:nth-child(odd){
+    background:#333;
+}
+
+/* even items */
+li:nth-child(even){
+    background:#555;
+}
+
+/* third item */
+li:nth-child(3){
+    color: gold;
+}
+
+/* first child */
+li:first-child{
+    font-weight:bold;
+}
+
+/* last child */
+li:last-child{
+    color: lightgreen;
+}
+
+/* columns using calc */
+.columns{
+    display:flex;
+}
+
+.column{
+    width: calc(50% - 10px);
+    margin:5px;
+    padding: calc(10px + 2%);
+    background:#222;
+}
+
+/* after pseudo element */
+h3::after{
+    content:" ✨";
+}
+
+/* input focus */
+input:focus{
+    border:2px solid gold;
+    background:#222;
+    color:white;
+}
+
+/* checkbox checked */
+input[type="checkbox"]:checked + label{
+    color:lightgreen;
+    font-weight:bold;
+}
+
+/* button styles */
+button{
+    padding:10px 20px;
+    position:relative;
+    background:#444;
+    color:white;
+    border:none;
+}
+
+/* active pseudo class */
+button:active{
+    background:red;
+}
+
+/* hover animation using after */
+button::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:3px;
+    background:gold;
+    transition:0.3s;
+}
+
+button:hover::after{
+    width:100%;
+}
+
+/* selection pseudo element */
+::selection{
+    background:gold;
+    color:black;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#2b1b17;
+}
